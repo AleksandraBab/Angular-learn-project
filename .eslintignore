@@ -1,0 +1,7 @@
+build/
+environments/
+tests/*.ts
+
+test.ts
+polyfills.ts
+main.ts
