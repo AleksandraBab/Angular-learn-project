@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @Component({
 	selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
 	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-	title = 'angular-learn';
+	@ViewChild('sidenav') sidenav!: SidenavComponent;
+
+	public toggleMenu(): void {
+		this.sidenav.drawer.toggle();
+	}
 }
