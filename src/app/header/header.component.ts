@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Output, EventEmitter, ViewContainerRef } from '@angular/core';
 
 @Component({
 	selector: 'app-header',
@@ -8,5 +8,4 @@ import { Component, OnInit, ChangeDetectionStrategy, Output, EventEmitter } from
 })
 export class HeaderComponent {
 	@Output() toggleMenu: EventEmitter<void> = new EventEmitter<void>();
-	constructor() {}
 }
