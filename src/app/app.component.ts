@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.scss'],
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-	title = 'angular-learn';
+	@ViewChild('sidenav') sidenav!: SidenavComponent;
+
+	public toggleMenu(): void {
+		this.sidenav.toggleMenu();
+	}
 }
