@@ -1,6 +1,5 @@
 :host {
 	display: flex;
-	height: 100%;
 }
 
 .example-container {
@@ -18,4 +17,11 @@
 
 .example-sidenav {
 	padding: 20px;
+}
+
+::ng-deep .mat-drawer-content {
+	width: 100%;
+	display: flex !important;
+	justify-content: center;
+	overflow: hidden !important;
 }
