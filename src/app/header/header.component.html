@@ -1,17 +1,15 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="toolbar">
   <button mat-icon-button
-    class="example-icon"
+    class="example-icon menu-icon"
     aria-label="Example icon-button with menu icon"
     (click)="toggleMenu.emit()"
   >
     <mat-icon>menu</mat-icon>
   </button>
-  <span>Learn Application</span>
+  <h1 class="title">Capibara shop</h1>
+  <img src="../../../assets/capi.png" alt="logo" class="logo">
   <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="cart">
+    <mat-icon>shopping_cart</mat-icon>
   </button>
 </mat-toolbar>

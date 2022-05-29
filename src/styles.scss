@@ -1,14 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
 $font-color: #373737;
+$mainfont-style: 'Barlow', sans-serif;
 
 h1 {
 	color: $font-color;
 	margin: 0;
+	font-family: $mainfont-style;
 }
 
 p {
 	color: $font-color;
+	font-family: $mainfont-style;
 	font-size: 15px;
 	line-height: 20px;
 	margin: 0;
@@ -20,5 +23,9 @@ body {
 }
 body {
 	margin: 0;
-	font-family: Roboto, 'Helvetica Neue', sans-serif;
+	font-family: $mainfont-style;
+}
+
+span {
+	font-family: $mainfont-style;
 }
