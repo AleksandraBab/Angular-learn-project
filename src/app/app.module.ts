@@ -1,3 +1,4 @@
+import { ProductsApiService } from './../shared/services/products-api.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -12,7 +13,7 @@ import { SidenavModule } from './sidenav/sidenav.module';
 
 import { ProductsListModule } from './products-list/products-list.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { Interceptor } from 'src/shared/interceptors/interceptor';
+import { BaseUrlInterceptor } from 'src/shared/interceptors/baseUrlInterceptor';
 
 @NgModule({
 	declarations: [AppComponent, HeaderComponent],
@@ -29,9 +30,10 @@ import { Interceptor } from 'src/shared/interceptors/interceptor';
 	providers: [
 		{
 			provide: HTTP_INTERCEPTORS,
-			useClass: Interceptor,
+			useClass: BaseUrlInterceptor,
 			multi: true,
 		},
+		ProductsApiService,
 	],
 	bootstrap: [AppComponent],
 })

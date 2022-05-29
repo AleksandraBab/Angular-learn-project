@@ -1,6 +1,12 @@
-<ul class="products-list">
-  <li *ngFor="let product of products; trackBy:trackById">
-    <app-product [product]="product">
-    </app-product>
-  </li>
-</ul>
+<ng-container *ngIf="(products$ | async) as products; else loader">
+  <ul class="products-list">
+    <li *ngFor="let product of products; index as index; trackBy:trackById">
+      <app-product [product]="product">
+      </app-product>
+    </li>
+  </ul>
+</ng-container>
+
+<ng-template #loader>
+  <mat-spinner></mat-spinner>
+</ng-template>
