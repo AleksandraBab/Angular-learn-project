@@ -4,14 +4,14 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 	selector: '[appPickItem]',
 })
 export class PickItemDirective {
-  private isScaled: boolean = false;
-  @HostBinding('style.transform')
-  private get transform(): string {
-    this.isScaled = !this.isScaled
-    return this.isScaled ? 'scale(1)' : 'scale(1.03)';
-  }
+	private isScaled: boolean = false;
+	@HostBinding('style.transform')
+	private get transform(): string {
+		this.isScaled = !this.isScaled;
+		return this.isScaled ? 'scale(1)' : 'scale(1.03)';
+	}
 
-  @HostListener('mouseenter') onMouseEnter(): void {
+	@HostListener('mouseenter') onMouseEnter(): void {
 		this.isScaled = true;
 	}
 
@@ -19,5 +19,3 @@ export class PickItemDirective {
 		this.isScaled = false;
 	}
 }
-
-
