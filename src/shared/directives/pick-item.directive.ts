@@ -4,18 +4,22 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 	selector: '[appPickItem]',
 })
 export class PickItemDirective {
-	private isScaled: boolean = false;
+	private isActive: boolean = false;
 	@HostBinding('style.transform')
 	private get transform(): string {
-		this.isScaled = !this.isScaled;
-		return this.isScaled ? 'scale(1)' : 'scale(1.03)';
+		return this.isActive ? 'scale(1.03)' : 'scale(1)';
+	}
+
+  @HostBinding('style.boxShadow')
+	private get shadow(): string {
+		return this.isActive ? '0px 0px 10px 5px #5f58361f' : '0px 0px 4px 3px #1818181f';
 	}
 
 	@HostListener('mouseenter') onMouseEnter(): void {
-		this.isScaled = true;
+		this.isActive = true;
 	}
 
 	@HostListener('mouseleave') onMouseLeave(): void {
-		this.isScaled = false;
+		this.isActive = false;
 	}
 }

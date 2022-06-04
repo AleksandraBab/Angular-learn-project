@@ -6,7 +6,7 @@
 
 .toolbar {
 	height: 110px;
-	background-color: #171717;
+	background-color: $dark-color;
 }
 
 .title {
@@ -15,6 +15,7 @@
 	font-family: $mainfont-style;
 	letter-spacing: 1.2px;
 	margin-right: 20px;
+  cursor: pointer;
 }
 
 .menu-icon {
