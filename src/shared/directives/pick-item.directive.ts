@@ -10,7 +10,7 @@ export class PickItemDirective {
 		return this.isActive ? 'scale(1.03)' : 'scale(1)';
 	}
 
-  @HostBinding('style.boxShadow')
+	@HostBinding('style.boxShadow')
 	private get shadow(): string {
 		return this.isActive ? '0px 0px 10px 5px #5f58361f' : '0px 0px 4px 3px #1818181f';
 	}

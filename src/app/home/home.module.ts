@@ -12,15 +12,7 @@ import { ProductsListModule } from '../products-list/products-list.module';
 
 @NgModule({
 	declarations: [HomeComponent, HeaderComponent, FooterComponent],
-	imports: [
-    CommonModule,
-    HomeRoutingModule,
-    MatButtonModule,
-		SidenavModule,
-    ProductsListModule,
-    MatToolbarModule,
-    MatIconModule,
-  ],
+	imports: [CommonModule, HomeRoutingModule, MatButtonModule, SidenavModule, ProductsListModule, MatToolbarModule, MatIconModule],
 	exports: [HomeComponent],
 })
 export class HomeModule {}

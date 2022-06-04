@@ -11,13 +11,7 @@ import { HomeModule } from './home/home.module';
 
 @NgModule({
 	declarations: [AppComponent],
-	imports: [
-		BrowserModule,
-		AppRoutingModule,
-		BrowserAnimationsModule,
-		MatIconModule,
-    HomeModule,
-	],
+	imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatIconModule, HomeModule],
 	providers: [
 		{
 			provide: HTTP_INTERCEPTORS,

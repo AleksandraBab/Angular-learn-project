@@ -8,11 +8,9 @@ import { Router } from '@angular/router';
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NotFoundComponent {
-  constructor(
-    private router: Router,
-  ) {}
+	constructor(private router: Router) {}
 
-  public goBack(): void {
-    this.router.navigate(['/'])
-  }
+	public goBack(): void {
+		this.router.navigate(['/']);
+	}
 }

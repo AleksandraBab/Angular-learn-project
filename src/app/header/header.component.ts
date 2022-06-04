@@ -10,11 +10,9 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
 	@Output() toggleMenu: EventEmitter<void> = new EventEmitter<void>();
 
-  constructor(
-    private router: Router,
-  ) {}
+	constructor(private router: Router) {}
 
-  public goHome(): void {
-    this.router.navigate(['/'])
-  }
+	public goHome(): void {
+		this.router.navigate(['/']);
+	}
 }
