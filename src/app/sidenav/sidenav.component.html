@@ -2,7 +2,5 @@
   <mat-drawer #drawer class="example-sidenav" mode="over" [autoFocus]="false">
     <p routerLink="./about" routerLinkActive="active">About Capybara</p>
   </mat-drawer>
-  <p>dsfdsfdsfdsfdsf</p>
-  <router-outlet></router-outlet>
-
+  <ng-content #content></ng-content>
 </mat-drawer-container>

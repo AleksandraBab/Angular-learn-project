@@ -8,11 +8,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { SidenavModule } from '../sidenav/sidenav.module';
-import { ProductsListModule } from '../products-list/products-list.module';
 
 @NgModule({
 	declarations: [HomeComponent, HeaderComponent, FooterComponent],
-	imports: [CommonModule, HomeRoutingModule, MatButtonModule, SidenavModule, ProductsListModule, MatToolbarModule, MatIconModule],
+	imports: [CommonModule, HomeRoutingModule, MatButtonModule, SidenavModule, MatToolbarModule, MatIconModule],
 	exports: [HomeComponent],
 })
 export class HomeModule {}
