@@ -7,13 +7,13 @@ const routes: Routes = [
 	{
 		path: '',
 		component: HomeComponent,
-    children: [
-      { path: 'about', component: AboutComponent },
-        {
-        path: '',
-        loadChildren: () => import('../products-list/products-list.module').then(m => m.ProductsListModule),
-      },
-    ],
+		children: [
+			{ path: 'about', component: AboutComponent },
+			{
+				path: '',
+				loadChildren: () => import('../products-list/products-list.module').then(m => m.ProductsListModule),
+			},
+		],
 	},
 ];
 
