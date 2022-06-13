@@ -7,10 +7,7 @@ import { IProduct } from 'src/shared/models';
 	styleUrls: ['./product.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProductComponent implements OnInit {
-	@Input() product!: IProduct;
-
-	ngOnInit(): void {
-		console.log('er', this.product);
-	}
+export class ProductComponent {
+	@Input() id!: string;
+	public product!: IProduct;
 }

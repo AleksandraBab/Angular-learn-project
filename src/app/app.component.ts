@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
-import { SidenavComponent } from './sidenav/sidenav.component';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
 	selector: 'app-root',
@@ -7,10 +6,4 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 	styleUrls: ['./app.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {
-	@ViewChild('sidenav') sidenav!: SidenavComponent;
-
-	public toggleMenu(): void {
-		this.sidenav.toggleMenu();
-	}
-}
+export class AppComponent {}

@@ -3,7 +3,9 @@ import { IProduct, IProductList } from 'src/shared/models';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-@Injectable()
+@Injectable({
+	providedIn: 'root',
+})
 export class ProductsApiService {
 	constructor(private http: HttpClient) {}
 

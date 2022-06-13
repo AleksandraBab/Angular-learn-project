@@ -1,8 +1,6 @@
 <mat-drawer-container class="example-container">
   <mat-drawer #drawer class="example-sidenav" mode="over" [autoFocus]="false">
-    <p>Some content</p>
+    <p routerLink="./about" routerLinkActive="active">About Capybara</p>
   </mat-drawer>
-
-  <app-products-list></app-products-list>
-
+  <ng-content #content></ng-content>
 </mat-drawer-container>

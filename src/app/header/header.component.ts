@@ -1,4 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy, Output, EventEmitter, ViewContainerRef } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-header',
@@ -8,4 +9,10 @@ import { Component, OnInit, ChangeDetectionStrategy, Output, EventEmitter, ViewC
 })
 export class HeaderComponent {
 	@Output() toggleMenu: EventEmitter<void> = new EventEmitter<void>();
+
+	constructor(private router: Router) {}
+
+	public goHome(): void {
+		this.router.navigate(['/']);
+	}
 }

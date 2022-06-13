@@ -1,7 +1,7 @@
-import { IProduct } from './../../shared/models';
-import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { IProduct } from '../../shared/models';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ProductsApiService } from 'src/shared/services/products-api.service';
-import { Observable, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Component({
 	selector: 'app-products-list',
@@ -12,7 +12,7 @@ import { Observable, Subscription } from 'rxjs';
 export class ProductsListComponent implements OnInit {
 	public products$!: Observable<Array<IProduct>>;
 
-	public constructor(private productsService: ProductsApiService, private cd: ChangeDetectorRef) {}
+	public constructor(private productsService: ProductsApiService) {}
 
 	public ngOnInit(): void {
 		this.products$ = this.productsService.getProducts();

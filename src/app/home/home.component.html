@@ -1,0 +1,7 @@
+<app-header (toggleMenu)="toggleMenu()"></app-header>
+<app-sidenav #sidenav>
+  <ng-container selector="content">
+    <router-outlet></router-outlet>
+  </ng-container>
+</app-sidenav>
+<app-footer></app-footer>

@@ -2,6 +2,7 @@
 
 $font-color: #373737;
 $mainfont-style: 'Barlow', sans-serif;
+$dark-color: #171717;
 
 h1 {
 	color: $font-color;
@@ -20,8 +21,6 @@ p {
 html,
 body {
 	height: 100%;
-}
-body {
 	margin: 0;
 	font-family: $mainfont-style;
 }
