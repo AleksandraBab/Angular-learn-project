@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { SidenavComponent } from './sidenav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
-import { ProductsListModule } from '../products-list/products-list.module';
+import { MatIconModule } from '@angular/material/icon';
 import { SideNavRoutingModule } from './sidenav-routing.module';
-import { AboutComponent } from '../about/about.component';
+import { MenuItemComponent } from '../menu-item/menu-item.component';
 
 @NgModule({
-	declarations: [SidenavComponent, AboutComponent],
-	imports: [CommonModule, MatSidenavModule, MatButtonModule, SideNavRoutingModule],
+	declarations: [SidenavComponent, MenuItemComponent],
+	imports: [CommonModule, MatSidenavModule, MatButtonModule, SideNavRoutingModule, MatIconModule],
 	exports: [SidenavComponent],
 })
 export class SidenavModule {}

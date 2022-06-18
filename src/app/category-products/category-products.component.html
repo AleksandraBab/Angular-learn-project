@@ -1,7 +1,7 @@
 <ng-container *ngIf="(products$ | async) as products; else loader">
   <ul class="products-list">
     <li *ngFor="let product of products; index as index; trackBy:trackById"
-    [routerLink]="['category', product.subCategory, product._id]"
+      [routerLink]="[product._id]"
     >
       <app-product-card [product]="product" [id]="product._id">
       </app-product-card>

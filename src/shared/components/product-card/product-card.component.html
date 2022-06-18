@@ -5,5 +5,9 @@
   <p><span class="card_count">{{product.feedbacksCount}}</span>
     {{product.feedbacksCount > 1 ? 'feedbacks' : 'feedback'}}
   </p>
-  <p class="card_price">{{product.price | currency: 'EUR' : 'symbol'}}</p>
+  <div class="card_buy">
+    <p class="card_price">{{product.price | currency: 'EUR' : 'symbol'}}</p>
+    <button class="card_buybtn">Add to chart</button>
+  </div>
+
 </div>

@@ -1,6 +1,11 @@
-<mat-drawer-container class="example-container">
-  <mat-drawer #drawer class="example-sidenav" mode="over" [autoFocus]="false">
-    <p routerLink="./about" routerLinkActive="active">About Capybara</p>
+<mat-drawer-container class="container">
+  <mat-drawer #drawer class="sidenav" mode="over" [autoFocus]="false">
+    <ng-container *ngIf="(categories$ | async) as categories">
+      <app-menu-item *ngFor="let category of categories"
+        [category]="category"
+      >
+      </app-menu-item>
+    </ng-container>
   </mat-drawer>
   <ng-content #content></ng-content>
 </mat-drawer-container>

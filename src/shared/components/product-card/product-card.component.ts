@@ -7,10 +7,6 @@ import { IProduct } from 'src/shared/models';
 	styleUrls: ['./product-card.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProductCardComponent implements OnInit {
+export class ProductCardComponent {
 	@Input() product!: IProduct;
-
-	ngOnInit(): void {
-		console.log('er', this.product);
-	}
 }
