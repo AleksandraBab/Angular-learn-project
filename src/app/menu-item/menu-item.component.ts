@@ -8,12 +8,12 @@ import { ICategory } from 'src/shared/models';
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MenuItemComponent {
-  @Input() category!: ICategory;
-  public visibility: boolean = false;
-  @HostListener('mouseenter') onMouseEnter() {
-    this.visibility = true;
-  }
-  @HostListener('mouseleave') onMouseLeave() {
-    this.visibility = false;
-  }
+	@Input() category!: ICategory;
+	public visibility: boolean = false;
+	@HostListener('mouseenter') onMouseEnter(): void {
+		this.visibility = true;
+	}
+	@HostListener('mouseleave') onMouseLeave(): void {
+		this.visibility = false;
+	}
 }

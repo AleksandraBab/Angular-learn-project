@@ -9,14 +9,14 @@ const routes: Routes = [
 		path: '',
 		component: HomeComponent,
 		children: [
-      {
-        path: 'category/:id',
-        loadChildren: () => import('../category-products/category-products.module').then(m => m.CategoryProductsModule),
-        children: [
-          { path: '', component: CategoryProductsComponent},
-          { path: ':id', component: ProductComponent},
-        ]
-      },
+			{
+				path: 'category/:id',
+				loadChildren: () => import('../category-products/category-products.module').then(m => m.CategoryProductsModule),
+				children: [
+					{ path: '', component: CategoryProductsComponent },
+					{ path: ':id', component: ProductComponent },
+				],
+			},
 			{
 				path: '',
 				loadChildren: () => import('../products-list/products-list.module').then(m => m.ProductsListModule),

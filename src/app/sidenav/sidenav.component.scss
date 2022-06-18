@@ -16,7 +16,7 @@
 }
 
 .sidenav {
-  overflow: visible;
+	overflow: visible;
 }
 
 ::ng-deep .mat-drawer-content {
@@ -27,7 +27,7 @@
 }
 
 ::ng-deep .mat-drawer-inner-container {
-  overflow: visible !important;
-  flex-direction: column;
-  display: flex;
+	overflow: visible !important;
+	flex-direction: column;
+	display: flex;
 }

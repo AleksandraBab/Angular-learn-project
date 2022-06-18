@@ -5,7 +5,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 
 @NgModule({
 	declarations: [PickItemDirective, ProductCardComponent],
-  imports: [CommonModule],
+	imports: [CommonModule],
 	providers: [],
 	exports: [PickItemDirective, ProductCardComponent],
 })

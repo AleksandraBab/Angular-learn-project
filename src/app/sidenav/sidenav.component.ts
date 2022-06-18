@@ -12,16 +12,13 @@ import { ProductsApiService } from 'src/shared/services/products-api.service';
 })
 export class SidenavComponent implements OnInit {
 	@ViewChild('drawer') drawer!: MatDrawer;
-  public categories$!: Observable<Array<ICategory>>;
+	public categories$!: Observable<Array<ICategory>>;
 
-	constructor(
-    private cd: ChangeDetectorRef,
-    private productsService: ProductsApiService,
-  ) {}
+	constructor(private cd: ChangeDetectorRef, private productsService: ProductsApiService) {}
 
-  public ngOnInit(): void {
-    this.categories$ = this.productsService.getCategories();
-  }
+	public ngOnInit(): void {
+		this.categories$ = this.productsService.getCategories();
+	}
 
 	public toggleMenu(): void {
 		this.drawer.toggle();

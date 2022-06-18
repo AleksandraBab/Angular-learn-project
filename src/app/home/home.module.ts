@@ -7,7 +7,7 @@ import { HeaderComponent } from '../header/header.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { SidenavModule } from '../sidenav/sidenav.module';
 import { ProductComponent } from '../product/product.component';
 

@@ -14,15 +14,15 @@ export class ProductsApiService {
 		return this.http.get<IProductList>('products/suggestion').pipe(map((data: IProductList) => data.data.items));
 	}
 
-  public getProductsFromCategory(id: string): Observable<Array<IProduct>> {
+	public getProductsFromCategory(id: string): Observable<Array<IProduct>> {
 		return this.http.get<IProductList>(`products/?subCat=${id}`).pipe(map((data: IProductList) => data.data.items));
 	}
 
-  public getProduct(id: string): Observable<IProductFull> {
+	public getProduct(id: string): Observable<IProductFull> {
 		return this.http.get<IProductFullData>(`products/${id}`).pipe(map((data: IProductFullData) => data.data));
 	}
 
-  public getCategories(): Observable<Array<ICategory>> {
+	public getCategories(): Observable<Array<ICategory>> {
 		return this.http.get<ICategories>('categories').pipe(map((data: ICategories) => data.data));
 	}
 }

@@ -11,29 +11,25 @@ import { ActivatedRoute } from '@angular/router';
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CategoryProductsComponent implements OnDestroy {
-  public id!: string;
-  public products$!: Observable<Array<IProduct>>;
-  private subscription: Subscription;
+	public id!: string;
+	public products$!: Observable<Array<IProduct>>;
+	private subscription: Subscription;
 
-  public constructor(
-    private activateRoute: ActivatedRoute,
-    private productsService: ProductsApiService,
-    private cd: ChangeDetectorRef,
-    ){
-    this.subscription = activateRoute.params.subscribe((params) => {
-      this.id = params['id'];
-      this.getProducts();
-      this.cd.markForCheck();
-    });
-  }
-
-	public getProducts(): void {
-    this.products$ = this.productsService.getProductsFromCategory(this.id);
+	public constructor(private activateRoute: ActivatedRoute, private productsService: ProductsApiService, private cd: ChangeDetectorRef) {
+		this.subscription = activateRoute.params.subscribe(params => {
+			this.id = params['id'];
+			this.getProducts();
+			this.cd.markForCheck();
+		});
 	}
 
-  public ngOnDestroy(): void {
-    this.subscription.unsubscribe();
-  }
+	public getProducts(): void {
+		this.products$ = this.productsService.getProductsFromCategory(this.id);
+	}
+
+	public ngOnDestroy(): void {
+		this.subscription.unsubscribe();
+	}
 
 	public trackById(index: number, product: IProduct): string {
 		return product._id;

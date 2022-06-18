@@ -11,14 +11,14 @@ import { SharedModule } from 'src/shared/shared.module';
 @NgModule({
 	declarations: [ProductsListComponent],
 	imports: [
-    CommonModule,
-    MatSidenavModule,
-    MatButtonModule,
-    HttpClientModule,
-    MatProgressSpinnerModule,
-    SharedModule,
-    ProductsListRoutingModule,
-  ],
+		CommonModule,
+		MatSidenavModule,
+		MatButtonModule,
+		HttpClientModule,
+		MatProgressSpinnerModule,
+		SharedModule,
+		ProductsListRoutingModule,
+	],
 	providers: [],
 	exports: [ProductsListComponent],
 })
