@@ -29,9 +29,14 @@
 	display: -webkit-box;
 }
 
-.card_price {
-	margin-bottom: 0;
+.card_buy {
+	display: flex;
+	justify-content: space-between;
 	margin-top: auto;
+}
+
+.card_price {
+	margin: 0;
 	font-weight: bold;
 }
 

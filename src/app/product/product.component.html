@@ -1,2 +1,44 @@
-<p>{{product.name}}</p>
-<p>123214</p>
+<div class="container_img">
+  <img class="img_main" [src]="product ? product.images[0].url : ''">
+</div>
+<div class="container_info">
+  <h3>{{product?.name}}</h3>
+  <p>{{product?.feedbacksCount}} {{product?.feedbacksCount !== 1 ? 'feedbacks' : 'feedback'}}</p>
+  <p class="price">{{product?.price | currency: 'EUR' : 'symbol'}}</p>
+
+  <button class="button_buy">Add to chart</button>
+
+  <p *ngIf="product?.characteristics">Characteristic</p>
+  <ul *ngIf="product?.characteristics">
+    <li *ngFor="let characteristic of product.characteristics | slice : 0 : characteristicsToShow">
+      <p>{{characteristic.title}}</p>
+      <ul>
+        <li *ngFor="let item of characteristic.items">
+          <p>{{item.name}}: <span>{{item.value}}</span></p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <p class="product_more" (click)="setCharacteristicsAmount()">{{characteristicsuttonText}}</p>
+
+  <mat-tab-group dynamicHeight animationDuration="0ms">
+    <mat-tab label="Description">
+      <div class="mat-elevation-z4 product_tab">
+        {{product?.description}}
+      </div>
+    </mat-tab>
+    <mat-tab label="Feedbacks">
+      <div class="mat-elevation-z4 product_tab">
+        <button class="button_feedback">Add feedback</button>
+        <ul class="feedbacks" *ngIf="product?.feedbacks">
+          <li class="feedbacks_item" *ngFor="let feedback of product.feedbacks">
+            <p>Guest</p>
+            <p>{{feedback.advantages}}</p>
+          </li>
+        </ul>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+</div>
