@@ -1,19 +1,169 @@
+@import '../../styles';
+
 :host {
 	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
+	justify-content: space-between;
 	width: 100%;
-	max-width: 1250px;
+	max-width: 1800px;
 	height: 100%;
 	margin-bottom: 80px;
+	padding: 0 40px;
+}
+
+.products_noresult {
+	padding: 80px 0;
+	font-size: 24px;
+	text-align: center;
 }
 
 .products-list {
 	list-style: none;
+	padding: 40px 0;
 	margin: 0;
-	padding: 0;
 	display: grid;
 	gap: 40px;
-	grid-template-columns: repeat(3, 250px);
+	grid-template-columns: repeat(5, 250px);
+}
+
+.filters {
+	align-self: flex-start;
+	padding: 40px 60px 40px 0;
+}
+
+.filters_title {
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+}
+
+.filters_name {
+	margin-bottom: 30px;
+}
+
+.filters_nametitle {
+	margin-bottom: 10px;
+	font-size: 18px;
+	letter-spacing: 0.5px;
+}
+
+.filters_nameinput {
+	border: 0;
+	border-bottom: 1px solid $gray;
+	outline: none;
+	background-color: $inpit-bckgrnd;
+	padding: 7px 10px;
+	font-size: 14px;
+	color: $font-color;
+	width: 220px;
+}
+
+.filters_brand {
+	margin-bottom: 30px;
+}
+
+.filters_brandtitle {
+	margin-bottom: 20px;
+	font-size: 18px;
+	letter-spacing: 0.5px;
+}
+
+.filters_selectall {
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.filters_list {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 10px 0;
+}
+
+.filters_more {
+	cursor: pointer;
+	color: $link;
+}
+
+.filters_price {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.filters_pricetitle {
+	margin-bottom: 20px;
+	font-size: 18px;
+	letter-spacing: 0.5px;
+}
+
+.filters_pricerange {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.filters_pricelabel {
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+.filters_priceinput {
+	border: 0;
+	border-bottom: 1px solid $gray;
+	outline: none;
+	background-color: $inpit-bckgrnd;
+	padding: 7px 10px;
+	font-size: 14px;
+	width: 40px;
+	color: $font-color;
+}
+
+.filters_priceinput:first-of-type {
+	margin-right: 20px;
+}
+
+.filters_button {
+	@include common-button;
+	background-color: $btn-color;
+}
+
+.filters_button:hover {
+	background-color: $btn-hover;
+}
+
+.btn-disabled {
+	background-color: $btn-disabled;
+	color: $gray;
+}
+
+.btn-disabled:hover {
+	background-color: $btn-disabled;
+}
+
+@media screen and (max-width: 1800px) {
+	.products-list {
+		grid-template-columns: repeat(4, 250px);
+	}
+}
+
+@media screen and (max-width: 1550px) {
+	:host {
+		justify-content: center;
+	}
+
+	.products-list {
+		grid-template-columns: repeat(3, 250px);
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.products-list {
+		grid-template-columns: repeat(2, 250px);
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.products-list {
+		grid-template-columns: 250px;
+	}
 }

@@ -23,7 +23,7 @@ export class ProductComponent implements OnInit, OnDestroy {
 	}
 
 	public ngOnInit(): void {
-		this.productSubscription = this.productsService.getProduct(this.id).subscribe(product => {
+		this.productSubscription = this.productsService.getProduct(this.id).subscribe((product: IProductFull) => {
 			this.product = product;
 			this.cd.markForCheck();
 		});

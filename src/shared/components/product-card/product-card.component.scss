@@ -1,13 +1,16 @@
+@import '../../../styles.scss';
+
 .card {
 	width: 250px;
-	height: 300px;
+	height: 350px;
 	display: flex;
 	flex-direction: column;
-	padding: 10px;
+	padding: 15px;
 	border-radius: 6px;
 	box-shadow: 0px 0px 4px 3px #1818181f;
 	cursor: pointer;
 	transition: 0.3s;
+	box-sizing: border-box;
 }
 
 .card_img {
@@ -27,6 +30,11 @@
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	display: -webkit-box;
+	cursor: pointer;
+}
+
+.card_title:hover {
+	color: $link;
 }
 
 .card_buy {
@@ -42,4 +50,13 @@
 
 .card_count {
 	margin-right: 5px;
+}
+
+.card_buybtn {
+	@include common-button;
+	background-color: #e9f7dc;
+}
+
+.card_buybtn:hover {
+	background-color: #d5f5b7;
 }

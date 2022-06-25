@@ -4,6 +4,24 @@ $font-color: #373737;
 $mainfont-style: 'Barlow', sans-serif;
 $dark-color: #171717;
 $hover: #cdbb671f;
+$link: #1f47cb;
+$active-link: #cdba6773;
+$inpit-bckgrnd: #ffe87f2b;
+$gray: #a3a1a1;
+$light-gray: #cac9c9;
+$btn-color: #c9eba9;
+$btn-hover: #90d450;
+$btn-disabled: #e6e6e6;
+
+@mixin common-button {
+	border: 1px solid #b3b3b3;
+	outline: #414141;
+	padding: 5px 10px;
+	color: $dark-color;
+	border-radius: 6px;
+	letter-spacing: 0.5px;
+	cursor: pointer;
+}
 
 h1 {
 	color: $font-color;

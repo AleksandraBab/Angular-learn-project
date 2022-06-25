@@ -1,7 +1,7 @@
 <div class="card" appPickItem>
   <img class="card_img" [src]="product.images[0].url" [alt]="product.name">
 
-  <p class="card_title">{{product.name}}</p>
+  <p class="card_title" (click)="navigate()">{{product.name}}</p>
   <p><span class="card_count">{{product.feedbacksCount}}</span>
     {{product.feedbacksCount > 1 ? 'feedbacks' : 'feedback'}}
   </p>
@@ -9,5 +9,4 @@
     <p class="card_price">{{product.price | currency: 'EUR' : 'symbol'}}</p>
     <button class="card_buybtn">Add to chart</button>
   </div>
-
 </div>

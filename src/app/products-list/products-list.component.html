@@ -1,9 +1,13 @@
 <ng-container *ngIf="(products$ | async) as products; else loader">
+  <div class="container">
+    <div class="line"></div>
+    <p class="title">Bestsellers</p>
+    <div class="line"></div>
+  </div>
+
   <ul class="products-list">
-    <li *ngFor="let product of products; index as index; trackBy:trackById"
-    [routerLink]="['category', product.subCategory, product._id]"
-    >
-      <app-product-card [product]="product" [id]="product._id">
+    <li *ngFor="let product of products; index as index; trackBy:trackById">
+      <app-product-card [product]="product" [category]="product.subCategory">
       </app-product-card>
     </li>
   </ul>
