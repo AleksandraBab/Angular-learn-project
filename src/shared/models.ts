@@ -12,13 +12,24 @@ export interface IProduct {
 	status: number;
 }
 
-export interface IProductList {
-	data: IProductListData;
+export interface IProductSuggetionList {
+	data: IProductSuggetionData;
+	error: string;
 }
 
-export interface IProductListData {
+export interface IProductList {
+	data: IProductData;
+	error: string;
+}
+
+export interface IProductSuggetionData {
 	items: Array<IProduct>;
 	quantity: number;
+}
+
+export interface IProductData {
+	items: Array<IProduct>;
+	prices: IPrice;
 }
 
 export interface IFeedback {
@@ -77,4 +88,9 @@ export interface ISubCategory {
 	_id: string;
 	name: string;
 	category: string;
+}
+
+export interface IPrice {
+	min: number;
+	max: number;
 }

@@ -7,7 +7,7 @@ export class PickItemDirective {
 	private isActive: boolean = false;
 	@HostBinding('style.transform')
 	private get transform(): string {
-		return this.isActive ? 'scale(1.03)' : 'scale(1)';
+		return this.isActive ? 'scale(1.02)' : 'scale(1)';
 	}
 
 	@HostBinding('style.boxShadow')

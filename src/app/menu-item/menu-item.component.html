@@ -1,8 +1,8 @@
 <p class="dropdown-title">{{category.name}}</p>
 <mat-icon class="icon" *ngIf="!visibility">chevron_right</mat-icon>
 <ul class="dropdown" [style.display]="visibility ? 'flex' : 'none'">
-  <li *ngFor="let subCategory of category.subCategories" class="dropdown-item"
-    [routerLink]="['category', subCategory._id]"
+  <li *ngFor="let subCategory of category.subCategories" class="dropdown-item" (click)="closeMenu()"
+    [routerLink]="['category', subCategory._id]" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
   >
     {{subCategory.name}}
   </li>

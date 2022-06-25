@@ -2,7 +2,7 @@
   <mat-drawer #drawer class="sidenav" mode="over" [autoFocus]="false">
     <ng-container *ngIf="(categories$ | async) as categories">
       <app-menu-item *ngFor="let category of categories"
-        [category]="category"
+        [category]="category" [drawer]="drawer"
       >
       </app-menu-item>
     </ng-container>

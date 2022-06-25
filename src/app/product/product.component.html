@@ -8,7 +8,7 @@
 
   <button class="button_buy">Add to chart</button>
 
-  <p *ngIf="product?.characteristics">Characteristic</p>
+  <p *ngIf="product?.characteristics">Characteristics</p>
   <ul *ngIf="product?.characteristics">
     <li *ngFor="let characteristic of product.characteristics | slice : 0 : characteristicsToShow">
       <p>{{characteristic.title}}</p>
