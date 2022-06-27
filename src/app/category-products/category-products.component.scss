@@ -11,13 +11,13 @@
 }
 
 .spinner {
-  margin: auto;
+	margin: auto;
 }
 
 .products {
-  width: calc(100% - 300px);
-  display: flex;
-  flex-direction: column;
+	width: calc(100% - 300px);
+	display: flex;
+	flex-direction: column;
 }
 
 .products_noresult {
@@ -38,8 +38,8 @@
 .filters {
 	align-self: flex-start;
 	padding: 40px 60px 40px 0;
-  width: 300px;
-  box-sizing: border-box;
+	width: 300px;
+	box-sizing: border-box;
 }
 
 .filters_title {

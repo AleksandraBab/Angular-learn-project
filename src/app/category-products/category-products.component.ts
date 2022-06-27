@@ -23,7 +23,7 @@ export class CategoryProductsComponent implements OnDestroy {
 	public priceTo: string = '';
 	public minPrice: number = 0;
 	public maxPrice: number | undefined;
-  public error: string = '';
+	public error: string = '';
 	private subscription: Subscription;
 	private brandSubscription!: Subscription;
 	private priceSubscription!: Subscription;
@@ -79,7 +79,7 @@ export class CategoryProductsComponent implements OnDestroy {
 			this.id,
 			this.priceFrom || '0',
 			this.priceTo || (this.maxPrice as number).toString(),
-		)
+		);
 	}
 
 	public trackById(index: number, product: IProduct): string {

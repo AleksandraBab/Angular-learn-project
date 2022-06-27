@@ -12,21 +12,21 @@ export class ProductsApiService {
 
 	public getProducts(): Observable<Array<IProduct>> {
 		return this.http.get<IProductSuggetionList>('products/suggestion').pipe(
-      map((data: IProductSuggetionList) => data.data.items),
-      catchError((error: Error) => {
-        console.log('err',error);
-        return EMPTY;
-      }),
-      );
+			map((data: IProductSuggetionList) => data.data.items),
+			catchError((error: Error) => {
+				console.log('err', error);
+				return EMPTY;
+			}),
+		);
 	}
 
 	public getProductsFromCategory(id: string): Observable<Array<IProduct>> {
 		return this.http.get<IProductList>(`products/?subCat=${id}`).pipe(
 			map((data: IProductList) => data.data.items),
-      catchError((error: Error) => {
-        console.log('err',error);
-        return EMPTY;
-      }),
+			catchError((error: Error) => {
+				console.log('err', error);
+				return EMPTY;
+			}),
 		);
 	}
 
@@ -34,19 +34,19 @@ export class ProductsApiService {
 		return this.http.get<IProductList>(`products/?subCat=${id}&prices=${min},${max}`).pipe(
 			map((data: IProductList) => data.data.items),
 			catchError((error: Error) => {
-        console.log('err',error);
-        return EMPTY;
-      }),
+				console.log('err', error);
+				return EMPTY;
+			}),
 		);
 	}
 
 	public getPrices(id: string): Observable<IPrice> {
 		return this.http.get<IProductList>(`products/?subCat=${id}`).pipe(
 			map((data: IProductList) => data.data.prices),
-      catchError((error: Error) => {
-        console.log('err',error);
-        return EMPTY;
-      }),
+			catchError((error: Error) => {
+				console.log('err', error);
+				return EMPTY;
+			}),
 		);
 	}
 
@@ -59,21 +59,20 @@ export class ProductsApiService {
 	public getProduct(id: string): Observable<IProductFull> {
 		return this.http.get<IProductFullData>(`products/${id}`).pipe(
 			map((data: IProductFullData) => data.data),
-      catchError((error: Error) => {
-        console.log('err',error);
-        return EMPTY;
-      }),
+			catchError((error: Error) => {
+				console.log('err', error);
+				return EMPTY;
+			}),
 		);
 	}
 
 	public getCategories(): Observable<Array<ICategory>> {
 		return this.http.get<ICategories>('categories').pipe(
-      map((data: ICategories) => data.data),
-      catchError((error: Error) => {
-        console.log('err',error);
-        return EMPTY;
-      }),
-      )
-
+			map((data: ICategories) => data.data),
+			catchError((error: Error) => {
+				console.log('err', error);
+				return EMPTY;
+			}),
+		);
 	}
 }
